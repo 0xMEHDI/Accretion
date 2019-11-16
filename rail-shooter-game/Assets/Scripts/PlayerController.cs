@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float xSpeed = 10.0f;
-    [Tooltip("In ms^-1")][SerializeField] float ySpeed = 10.0f;
-
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float speed = 10f;
     [Tooltip("In m")][SerializeField] float xRange  = 5.5f; 
     [Tooltip("In m")][SerializeField] float yRange = 3.5f;
+    [SerializeField] GameObject[] guns;
 
+    [Header("Position")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -15f;
-
     [SerializeField] float positionYawFactor = 5f;
 
+    [Header("Control")]
+    [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float controlRollFactor = -15f;
 
     float xThrow, yThrow;
+    bool controlsEnabled = true;
 
     void Start()
     {
@@ -27,8 +29,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if(controlsEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+            ProcessFiring();
+        }     
     }
 
     private void ProcessTranslation()
@@ -36,8 +42,8 @@ public class Player : MonoBehaviour
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * xSpeed * Time.deltaTime;
-        float yOffset = yThrow * ySpeed * Time.deltaTime;
+        float xOffset = xThrow * speed * Time.deltaTime;
+        float yOffset = yThrow * speed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
@@ -56,5 +62,25 @@ public class Player : MonoBehaviour
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        foreach (GameObject gun in guns) 
+        {
+            if (CrossPlatformInputManager.GetButton("Fire1"))
+            {
+                gun.SetActive(true);
+            }
+            else
+            {
+                gun.SetActive(false);
+            }
+        }
+    }
+
+    private void StopMovement()
+    {
+        controlsEnabled = false;
     }
 }
