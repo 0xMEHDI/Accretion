@@ -17,6 +17,8 @@ public class CollisionHandler : MonoBehaviour
     {
         SendMessage("StopMovement");       
         deathFX.SetActive(true);
+        MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
+        meshRenderer.enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
     }
 

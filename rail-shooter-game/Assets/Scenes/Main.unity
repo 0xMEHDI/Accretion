@@ -262,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &167434599
 PrefabInstance:
@@ -304,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4301618257826614, guid: 5f0acb7fcf73f9b43beff0e0f19c45da, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4301618257826614, guid: 5f0acb7fcf73f9b43beff0e0f19c45da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -493,6 +495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &238092993
 PrefabInstance:
@@ -632,6 +636,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &435808852
 PrefabInstance:
@@ -674,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -765,6 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &488667374
 GameObject:
@@ -967,6 +975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &586624749
 GameObject:
@@ -1039,7 +1049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1345,7 +1355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1399,6 +1409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!65 &725771524
 BoxCollider:
@@ -1466,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1587,6 +1599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &804892440
 PrefabInstance:
@@ -1629,7 +1643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2042,6 +2056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &976850722
 PrefabInstance:
@@ -2117,12 +2133,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
     type: 3}
   m_PrefabInstance: {fileID: 976850722}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1029194717 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746,
-    type: 3}
-  m_PrefabInstance: {fileID: 1553681685}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1030699297
 GameObject:
@@ -2292,6 +2302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1079208586 stripped
 GameObject:
@@ -2326,6 +2338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1100137244 stripped
 GameObject:
@@ -2360,6 +2374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1109317296
 GameObject:
@@ -2391,40 +2407,6 @@ Transform:
   m_Father: {fileID: 1289936482}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1136317012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746,
-    type: 3}
-  m_PrefabInstance: {fileID: 1553681685}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1136317014
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136317012}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6627084, y: 0.48463184, z: 0.1403246}
-  m_Center: {x: 0.000000014901161, y: 0, z: -0.0000000037252903}
---- !u!114 &1136317016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136317012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ba3c059a89e214fa3f50eacf92de9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
-  parent: {fileID: 1198294130}
-  scorePerHit: 1000
 --- !u!1 &1148834967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1249153269
 GameObject:
@@ -2689,6 +2673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1289936481
 GameObject:
@@ -2954,67 +2940,6 @@ Transform:
   m_Father: {fileID: 1289936482}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1553681685
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1983510844}
-    m_Modifications:
-    - target: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_Name
-      value: Ship_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -335.22168
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -56.14502
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 85.938934
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1000
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
 --- !u!1001 &1566914292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3356,6 +3281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!4 &1776959912 stripped
 Transform:
@@ -3396,6 +3323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1802740556
 GameObject:
@@ -3601,6 +3530,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1906865057 stripped
 GameObject:
@@ -3635,6 +3566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1920166660 stripped
 GameObject:
@@ -3669,6 +3602,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1920901991
 GameObject:
@@ -3741,7 +3676,6 @@ Transform:
   - {fileID: 996127328}
   - {fileID: 1538832965}
   - {fileID: 2109418234}
-  - {fileID: 1029194717}
   - {fileID: 948277023}
   - {fileID: 1817174451}
   - {fileID: 1328634501}
@@ -3784,6 +3718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1 &1988403475 stripped
 GameObject:
@@ -3818,6 +3754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6474333555595544804, guid: 4875a1a6a48c9024ebe79f4958780969, type: 3}
   parent: {fileID: 1198294130}
+  health: 100
+  damagePerHit: 10
   scorePerHit: 1000
 --- !u!1001 &2000498717
 PrefabInstance:
@@ -4075,6 +4013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522020752000630747, guid: 2d0b7b8c8d3312d419a780c6e6d8a4e6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d0b7b8c8d3312d419a780c6e6d8a4e6, type: 3}
