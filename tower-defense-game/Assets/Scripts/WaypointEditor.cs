@@ -6,13 +6,13 @@ using UnityEngine;
 [SelectionBase]
 [RequireComponent(typeof(Waypoint))]
 public class WaypointEditor : MonoBehaviour
-{   
-    Waypoint waypoint;    
+{
+    Waypoint waypoint;
+    int gridSize = Waypoint.gridSize;
 
     private void Awake()
     {
         waypoint = GetComponent<Waypoint>();
-        
     }
 
     void Update()
@@ -24,19 +24,18 @@ public class WaypointEditor : MonoBehaviour
     private void SnapToGrid()
     {
         transform.position = new Vector3(
-            waypoint.GetWaypointPosition().x, 0f, 
-            waypoint.GetWaypointPosition().y
+            waypoint.GetWaypointPosition().x * gridSize, 0f, 
+            waypoint.GetWaypointPosition().y * gridSize
             );
     }
 
     private void UpdateLabel()
     {
-        int gridSize = Waypoint.gridSize;
         TextMesh label = GetComponentInChildren<TextMesh>();
 
         string labelText = 
-            waypoint.GetWaypointPosition().x / gridSize + "," + 
-            waypoint.GetWaypointPosition().y / gridSize;
+            waypoint.GetWaypointPosition().x + "," + 
+            waypoint.GetWaypointPosition().y;
 
         label.text = labelText;
         gameObject.name = labelText;

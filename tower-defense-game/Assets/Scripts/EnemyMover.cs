@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] List<Waypoint> path;
-    [SerializeField] float movementDelay = 1f;
+    [SerializeField] float movementDelay = 0.5f;
 
     void Start()
     {
-        StartCoroutine(FollowPath());
+        Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+        List<Waypoint> path = pathfinder.getPath();
+        StartCoroutine(FollowPath(path));
     }
 
-    IEnumerator FollowPath()
+    IEnumerator FollowPath(List<Waypoint> path)
     {
-        print("Starting Patrol");
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            print("Visiting: " + waypoint.name);
             yield return new WaitForSeconds(movementDelay);
         }
-        print("Ending Patrol");
     }
 }
