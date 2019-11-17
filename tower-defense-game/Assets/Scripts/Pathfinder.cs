@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    [SerializeField] Waypoint startWaypoint, endWaypoint;
+    [SerializeField] Waypoint startWaypoint;
+    [SerializeField] Waypoint endWaypoint;
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
@@ -18,6 +19,7 @@ public class Pathfinder : MonoBehaviour
         Vector2Int.down,
         Vector2Int.left,
         };
+    
     Waypoint currentWaypoint;
 
     bool isPathfinding = true;
@@ -80,7 +82,7 @@ public class Pathfinder : MonoBehaviour
         while (previousWaypoint != startWaypoint)
         {
             path.Add(previousWaypoint);
-            previousWaypoint = previousWaypoint.exploredFrom;    
+            previousWaypoint = previousWaypoint.exploredFrom;
         }
         path.Add(startWaypoint);
 
