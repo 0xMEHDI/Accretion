@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     PlayerController player;
 
-    void Awake()
+    void Start()
     {
         player = FindObjectOfType<PlayerController>();
     }
