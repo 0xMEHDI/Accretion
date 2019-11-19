@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class TextUpdater : MonoBehaviour
 {
-    //fetch player + damagehandler
-
     CollectableCollector collector;
     Text text;
 
@@ -24,7 +22,6 @@ public class TextUpdater : MonoBehaviour
     {
         coinCount = collector.getCoinCount();
         keyCount = collector.getKeyCount();
-        // get then update player health
-        text.text = "Coins: " + coinCount + "\r\n" + "Keys: " + keyCount + "\r\n" + "Health: ";
+        text.text = "Coins: " + coinCount + "\r\n" + "Keys: " + keyCount;
     }
 }
