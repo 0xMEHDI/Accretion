@@ -21,12 +21,12 @@ public class CollectableCollector : MonoBehaviour
         }
     }
 
-    public int getCoins()
+    public int getCoinCount()
     {
         return coins;
     }
 
-    public int getKeys()
+    public int getKeyCount()
     {
         return keys;
     }
