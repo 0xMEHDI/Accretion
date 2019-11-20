@@ -12,6 +12,8 @@ public class PlayerController : PhysicsHandler
     [SerializeField] int playerHealth = 3;
 
     Animator animator;
+    AudioSource audioSource;
+    [SerializeField] AudioClip damageSound;
 
     Vector2 move;
     bool canMove = true;
@@ -19,6 +21,7 @@ public class PlayerController : PhysicsHandler
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected override void ComputeVelocity()
@@ -59,7 +62,7 @@ public class PlayerController : PhysicsHandler
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
     }
 
-    //TODO Rework using PhysicsHandler behaviour
+    //TODO Refactor
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (canMove)
@@ -70,18 +73,35 @@ public class PlayerController : PhysicsHandler
                 Vector2 knockback = direction * knockbackForce * Time.fixedDeltaTime;
                 rb2d.position += knockback;
 
-                playerHealth--;
-                if (playerHealth <= 0)
-                {
-                    canMove = false;
-                    animator.SetBool("dead", true);
-                    Invoke("StartDeathSequence", 3f);
+                if (playerHealth > 1)
+                { 
+                    playerHealth--;
+                    audioSource.PlayOneShot(damageSound);
                 }
+
+                else if (playerHealth <= 1)
+                {
+                    playerHealth--;
+                    StartDeathSequence();
+                }
+            }
+
+            else if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                StartDeathSequence();
             }
         }
     }
 
     private void StartDeathSequence()
+    {
+        audioSource.Play();
+        canMove = false;
+        animator.SetBool("dead", true);
+        Invoke("ReloadLevel", 3f);
+    }
+
+    private void ReloadLevel()
     {
         SceneManager.LoadScene(0);
     }
