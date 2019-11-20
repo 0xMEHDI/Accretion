@@ -4,29 +4,58 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] float speed = 1f;
-    [SerializeField] Transform groundCheck;
-    //[SerializeField] Transform wallLeftCheck;
-    //[SerializeField] Transform wallRightCheck;
+    [SerializeField] float lockOnSpeed = 2f;
+    [SerializeField] float lockOnDistance = 5f;
+    [SerializeField] float lockOnDeadZone = 1f;
 
+    Transform player;
     Rigidbody2D rb2d;
+    Animator animator;
 
-    [SerializeField] bool movingLeft = true;
+    bool moving;
 
     void Start()
     {
+        player = FindObjectOfType<PlayerController>().transform;
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (movingLeft)
-        {
+        animator.SetBool("moving", moving);
+    }
 
+    void FixedUpdate()
+    {
+        if (Mathf.Abs(player.position.x - rb2d.position.x) < lockOnDistance && Mathf.Abs(player.position.y - rb2d.position.y) < lockOnDistance)
+        {
+            if (Mathf.Abs(player.position.x - rb2d.position.x) > lockOnDeadZone)
+            {
+                Vector2 target = new Vector2(player.position.x, rb2d.position.y);
+                rb2d.position = Vector2.MoveTowards(rb2d.position, target, lockOnSpeed * Time.fixedDeltaTime);
+
+                moving = true ? rb2d.position.x != player.position.x : moving = false;
+
+                if (rb2d.position.x - player.position.x > Mathf.Epsilon)
+                {
+                    rb2d.transform.localScale = new Vector2(Mathf.Abs(rb2d.transform.localScale.x), rb2d.transform.localScale.y);
+                }
+                else if (rb2d.position.x - player.position.x < -Mathf.Epsilon)
+                {
+                    rb2d.transform.localScale = new Vector2(-Mathf.Abs(rb2d.transform.localScale.x), rb2d.transform.localScale.y);
+                }
+            }
+
+            else
+            {
+                moving = false;
+            }
         }
+
         else 
         {
-            movingLeft = false;
+            moving = false;
         }
     }
 }
