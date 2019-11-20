@@ -62,18 +62,21 @@ public class PlayerController : PhysicsHandler
     //TODO Rework using PhysicsHandler behaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (canMove)
         {
-            Vector2 direction = (Vector2)(transform.position - collision.transform.position).normalized;
-            Vector2 knockback = direction * knockbackForce * Time.fixedDeltaTime;
-            rb2d.position += knockback;
-
-            playerHealth--;
-            if (playerHealth <= 0)
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                canMove = false;
-                animator.SetBool("dead", true);
-                Invoke("StartDeathSequence", 3f);
+                Vector2 direction = (Vector2)(transform.position - collision.transform.position).normalized;
+                Vector2 knockback = direction * knockbackForce * Time.fixedDeltaTime;
+                rb2d.position += knockback;
+
+                playerHealth--;
+                if (playerHealth <= 0)
+                {
+                    canMove = false;
+                    animator.SetBool("dead", true);
+                    Invoke("StartDeathSequence", 3f);
+                }
             }
         }
     }
