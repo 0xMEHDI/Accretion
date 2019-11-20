@@ -9,24 +9,24 @@ public class CollectableCollector : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Coin")
+        if (collision.gameObject.CompareTag("Coin"))
         {
             Destroy(collision.gameObject);
             coins++;
         }
-        else if (collision.tag == "Key")
+        else if (collision.gameObject.CompareTag("Key"))
         {
             Destroy(collision.gameObject);
             keys++;
         }
     }
 
-    public int getCoinCount()
+    public int GetCoinCount()
     {
         return coins;
     }
 
-    public int getKeyCount()
+    public int GetKeyCount()
     {
         return keys;
     }

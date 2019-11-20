@@ -4,24 +4,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//TODO Refactor
 public class TextUpdater : MonoBehaviour
 {
-    CollectableCollector collector;
-    Text text;
+    [SerializeField] Text[] text;
 
+    PlayerController player;
+    CollectableCollector collector;
+
+    int playerHealth;
     int coinCount;
     int keyCount;
 
     void Start()
     {
-        collector = FindObjectOfType<CollectableCollector>();
-        text = GetComponent<Text>();
+        player = FindObjectOfType<PlayerController>();
+        collector = player.gameObject.GetComponent<CollectableCollector>();
+
+        text = FindObjectsOfType<Text>();
     }
 
     void Update()
     {
-        coinCount = collector.getCoinCount();
-        keyCount = collector.getKeyCount();
-        text.text = "Coins: " + coinCount + "\r\n" + "Keys: " + keyCount;
+        playerHealth = player.GetPlayerHealth();
+        coinCount = collector.GetCoinCount();
+        keyCount = collector.GetKeyCount();
+
+        text[1].color = Color.black;
+        text[1].text = "Health: " + playerHealth;
+
+        text[0].color = Color.black;
+        text[0].text = "Coins: " + coinCount + "\r\n" + "Keys: " + keyCount;
     }
 }
