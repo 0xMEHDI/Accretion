@@ -95,6 +95,7 @@ public class PlayerController : PhysicsHandler
 
     private void StartDeathSequence()
     {
+        playerHealth = 0;
         audioSource.Play();
         canMove = false;
         animator.SetBool("dead", true);
